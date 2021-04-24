@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apache.nifi</groupId>
+        <artifactId>nifi</artifactId>
+        <version>1.13.2</version>
+    </parent>
+    <artifactId>nifi-nar-bundles</artifactId>
+    <packaging>pom</packaging>
+    <description>该模块中为引用的各种nar包</description>
+
+    <modules>
+        <module>nifi-framework-bundle</module><!--nifi-framework-api实现（nifi-core）-->
+        <module>nifi-standard-bundle</module><!--jolt转json-->
+        <module>nifi-standard-services</module><!--nifi基础功能service-->
+        <module>nifi-jetty-bundle</module><!--nifi-api需要-->
+        <module>nifi-hadoop-bundle</module>
+        <module>nifi-hadoop-libraries-bundle</module>
+        <module>nifi-provenance-repository-bundle</module><!--数据源持久化-->
+        <module>nifi-update-attribute-bundle</module><!--更新属性-->
+        <module>nifi-kafka-bundle</module>
+        <!--        <module>nifi-kite-bundle</module>-->
+        <module>nifi-kudu-bundle</module>
+        <!--        <module>nifi-solr-bundle</module>-->
+        <!--        <module>nifi-confluent-platform-bundle</module>-->
+        <!--        <module>nifi-aws-bundle</module>-->
+        <!--        <module>nifi-gcp-bundle</module>&lt;!&ndash;google-cloud platform&ndash;&gt;-->
+        <module>nifi-media-bundle</module><!--图片数据处理-->
+        <!--        <module>nifi-social-media-bundle</module>&lt;!&ndash;Twitter数据处理&ndash;&gt;-->
+        <module>nifi-enrich-bundle</module><!--DNS和Whois数据处理(GEO IP)-->
+        <!--        <module>nifi-hl7-bundle</module>-->
+        <!--        <module>nifi-ccda-bundle</module>-->
+        <module>nifi-language-translation-bundle</module><!--语言转换-->
+        <module>nifi-flume-bundle</module>
+        <module>nifi-hbase-bundle</module>
+        <module>nifi-ambari-bundle</module>
+        <module>nifi-avro-bundle</module>
+        <!--        <module>nifi-azure-bundle</module>-->
+        <!--        <module>nifi-ldap-iaa-providers-bundle</module>-->
+        <!--        <module>nifi-kerberos-iaa-providers-bundle</module>-->
+        <!--        <module>nifi-riemann-bundle</module>-->
+        <!--        <module>nifi-html-bundle</module>&lt;!&ndash;html解析&ndash;&gt;-->
+        <module>nifi-scripting-bundle</module><!--Groovy，Javascript，Jython等脚本的配置运行-->
+
+
+        <!--        <module>nifi-couchbase-bundle</module> --><!-- couchbase数据库-->
+        <module>nifi-mongodb-bundle</module>
+        <module>nifi-elasticsearch-bundle</module>
+        <!--        <module>nifi-amqp-bundle</module>-->
+        <!--        <module>nifi-splunk-bundle</module>-->
+        <!--        <module>nifi-jms-bundle</module>-->
+
+        <!--        <module>nifi-grpc-bundle</module>&lt;!&ndash;grpc工件在构建方面，它们是众所周知的特定于环境的，例如:由于需要更新版本的GLIBC而不能在os/arch=ppc64le或Centos6中工作。&ndash;&gt;-->
+
+        <!--        <module>nifi-lumberjack-bundle</module>-->
+        <module>nifi-beats-bundle</module>
+        <!--        <module>nifi-cassandra-bundle</module>-->
+        <module>nifi-spring-bundle</module><!--Spring配置数据处理-->
+        <module>nifi-hive-bundle</module><!--与Hive中数据交互的实现，包含连接池。-->
+        <!--        <module>nifi-site-to-site-reporting-bundle</module>&lt;!&ndash;site-to-site协议&ndash;&gt;-->
+        <!--        <module>nifi-mqtt-bundle</module>-->
+        <!--        <module>nifi-evtx-bundle</module>&lt;!&ndash;是windows服务器日志&ndash;&gt;-->
+
+        <!--        <module>nifi-slack-bundle</module>&lt;!&ndash;使用Slack发送消息&ndash;&gt;-->
+
+        <!--        <module>nifi-smb-bundle</module>-->
+        <!--        <module>nifi-snmp-bundle</module>-->
+        <!--        <module>nifi-datadog-bundle</module>-->
+        <!--        <module>nifi-windows-event-log-bundle</module>-->
+        <!--        <module>nifi-ignite-bundle</module>-->
+        <!--        <module>nifi-rethinkdb-bundle</module>-->
+        <!--        <module>nifi-influxdb-bundle</module>-->
+        <module>nifi-graph-bundle</module>
+        <!--        <module>nifi-email-bundle</module>&lt;!&ndash;邮件数据处理&ndash;&gt;-->
+        <module>nifi-groovyx-bundle</module>
+        <!--        <module>nifi-ranger-bundle</module>&lt;!&ndash;apache Ranger插件&ndash;&gt;-->
+        <!--        <module>nifi-websocket-bundle</module>&lt;!&ndash;WEBSOCKET方式&ndash;&gt;-->
+        <!--        <module>nifi-tcp-bundle</module>-->
+        <module>nifi-registry-bundle</module>
+        <module>nifi-stateful-analysis-bundle</module>
+        <module>nifi-poi-bundle</module><!--excel解析-->
+        <module>nifi-cdc</module><!--sqlServer cdc-->
+        <module>nifi-cybersecurity-bundle</module>
+        <module>nifi-parquet-bundle</module>
+        <module>nifi-extension-utils</module>
+        <!--        <module>nifi-redis-bundle</module>-->
+        <module>nifi-metrics-reporting-bundle</module>
+        <module>nifi-spark-bundle</module>
+        <module>nifi-atlas-bundle</module>
+        <!--        <module>nifi-druid-bundle</module>&lt;!&ndash;apache Druid&ndash;&gt;-->
+        <module>nifi-jolt-record-bundle</module><!--https://github.com/bazaarvoice/jolt-->
+        <module>nifi-network-bundle</module>
+        <!--        <module>nifi-prometheus-bundle</module>-->
+        <module>nifi-easyrules-bundle</module>
+        <module>nifi-sql-reporting-bundle</module>
+        <module>nifi-rules-action-handler-bundle</module>
+        <!--        <module>nifi-accumulo-bundle</module>-->
+        <!--        <module>nifi-hazelcast-bundle</module>-->
+    </modules>
+
+    <build>
+        <plugins>
+            <!-- Makes buildRevision and buildBranch available to the NAR Plugin so they can be populated in the MANIFEST -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <inherited>true</inherited>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <doCheck>false</doCheck>
+                    <doUpdate>false</doUpdate>
+                    <shortRevisionLength>7</shortRevisionLength>
+                    <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+                    <revisionOnScmFailure/>
+                    <buildNumberPropertyName>buildRevision</buildNumberPropertyName>
+                    <scmBranchPropertyName>buildBranch</scmBranchPropertyName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-distributed-cache-client-service</artifactId>
+                <version>1.13.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-distributed-cache-client-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-record-serialization-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-record</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-schema-registry-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-ssl-context-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-security-utils-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-load-distribution-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-http-context-map-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-lookup-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-kerberos-credentials-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-mongodb-client-service-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-record-sink-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-distributed-cache-protocol</artifactId>
+                <version>1.13.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-distributed-cache-server</artifactId>
+                <version>1.13.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-ssl-context-service</artifactId>
+                <version>1.13.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-http-context-map</artifactId>
+                <version>1.13.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-proxy-configuration-api</artifactId>
+                <version>1.13.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-cassandra-services-api</artifactId>
+                <version>1.13.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-volatile-provenance-repository</artifactId>
+                <version>1.13.2</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-mock</artifactId>
+                <version>1.13.2</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-mock-record-utils</artifactId>
+                <version>1.13.2</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- The following dependencies are marked provided because they must be provided by the container.  Nars can assume they are there-->
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-framework-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-server-api</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-runtime</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-nar-utils</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-properties</artifactId>
+                <version>1.13.2</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
