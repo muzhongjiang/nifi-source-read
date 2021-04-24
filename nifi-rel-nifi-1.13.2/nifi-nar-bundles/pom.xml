@@ -33,11 +33,11 @@
         <module>nifi-enrich-bundle</module><!--DNS和Whois数据处理(GEO IP)-->
         <!--        <module>nifi-hl7-bundle</module>-->
         <!--        <module>nifi-ccda-bundle</module>-->
-        <module>nifi-language-translation-bundle</module><!--语言转换-->
+        <!--        <module>nifi-language-translation-bundle</module>&lt;!&ndash;语言转换&ndash;&gt;-->
         <module>nifi-flume-bundle</module>
         <module>nifi-hbase-bundle</module>
         <module>nifi-ambari-bundle</module>
-        <module>nifi-avro-bundle</module>
+        <!--        <module>nifi-avro-bundle</module>-->
         <!--        <module>nifi-azure-bundle</module>-->
         <!--        <module>nifi-ldap-iaa-providers-bundle</module>-->
         <!--        <module>nifi-kerberos-iaa-providers-bundle</module>-->
@@ -83,7 +83,7 @@
         <module>nifi-stateful-analysis-bundle</module>
         <module>nifi-poi-bundle</module><!--excel解析-->
         <module>nifi-cdc</module><!--sqlServer cdc-->
-        <module>nifi-cybersecurity-bundle</module>
+        <!--        <module>nifi-cybersecurity-bundle</module>-->
         <module>nifi-parquet-bundle</module>
         <module>nifi-extension-utils</module>
         <!--        <module>nifi-redis-bundle</module>-->
