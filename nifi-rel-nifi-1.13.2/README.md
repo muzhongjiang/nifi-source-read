@@ -1,7 +1,7 @@
-#Nifi源码阅读
-  ###历史原因，阅读难度有点大
+#Nifi源码阅读  
+###历史原因，阅读难度有点大   
   
-## Table of Contents
+## Table of Contents   
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -11,37 +11,37 @@
 - [License](#license)
 - [Export Control](#export-control)
 
-## Features
+## Features    
 
-Apache NiFi was made for dataflow. It supports highly configurable directed graphs of data routing, transformation, and system mediation logic. Some of its key features include:
+Apache NiFi为数据流设计. 它支持高度可配置的数据路由、转换和系统中介逻辑的有向图。它的一些主要功能包括：
 
-- Web-based user interface
-  - Seamless experience for design, control, and monitoring
-  - Multi-tenant user experience
-- Highly configurable
-  - Loss tolerant vs guaranteed delivery
-  - Low latency vs high throughput
-  - Dynamic prioritization
-  - Flows can be modified at runtime
-  - Back pressure
-  - Scales up to leverage full machine capability
-  - Scales out with zero-leader clustering model
-- Data Provenance
-  - Track dataflow from beginning to end
-- Designed for extension
-  - Build your own processors and more
-  - Enables rapid development and effective testing
-- Secure
-  - SSL, SSH, HTTPS, encrypted content, etc...
-  - Pluggable fine-grained role-based authentication/authorization
-  - Multiple teams can manage and share specific portions of the flow
+- 基于Web的用户界面
+  - 设计、控制和监控的无缝体验
+  - 多租户用户体验
+- 高度可配置
+    - 容错与保证交货
+    - 低延迟与高吞吐量
+    - 动态优先排序 
+    - 可以在运行时修改流
+    - 背压
+    - 向上扩展以利用完整的机器功能
+    - 用零前导聚类模型扩展
+- 数据溯源
+    - 从头到尾跟踪数据流
+- 专为扩展而设计
+    - 构建自己的处理器（processors）等等
+    - 实现快速开发和有效测试  
+- 安全
+    - SSL、SSH、HTTPS、加密内容等。。。
+    - 可插拔的细粒度基于角色的身份验证/授权
+    - 多个团队可以管理和共享流的特定部分
 
-## Requirements
+## Requirements  
 * JDK 1.8 (*ongoing work to enable NiFi to run on Java 9/10/11; see [NIFI-5174](https://issues.apache.org/jira/browse/NIFI-5174)*)
 * Apache Maven 3.1.1 or newer
 * Git Client (used during build process by 'bower' plugin)
 
-## Getting Started
+## Getting Started  
 
 - Read through the [quickstart guide for development](http://nifi.apache.org/quickstart.html).
   It will include information on getting a local copy of the source, give pointers on issue
@@ -49,7 +49,7 @@ Apache NiFi was made for dataflow. It supports highly configurable directed grap
 - For a more comprehensive guide to development and information about contributing to the project
   read through the [NiFi Developer's Guide](http://nifi.apache.org/developer-guide.html).
 
-To build:
+###构建:  
 - Execute `mvn clean install` or for parallel build execute `mvn -T 2.0C clean install`. On a
   modest development laptop that is a couple of years old, the latter build takes a bit under ten
   minutes. After a large amount of output you should eventually see a success message.
@@ -67,7 +67,7 @@ To build:
         [INFO] ------------------------------------------------------------------------
 - Execute `mvn clean install -DskipTests` to compile tests, but skip running them.
 
-To deploy:
+###部署:  
 - Change directory to 'nifi-assembly'. In the target directory, there should be a build of nifi.
 
         laptop:nifi myuser$ cd nifi-assembly
